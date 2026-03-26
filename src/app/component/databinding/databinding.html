@@ -1,8 +1,64 @@
 <p>databinding works!</p>
 
-<select>
+<!-- <select>
     <option value="">Semeter</option>
     <option value="">Book</option>
 </select>
 
-<button type="button">Select</button>
+<button type="button">Select</button> -->
+
+<!-- One Way Data Binding -->
+
+<table>
+    <tbody>
+        <!-- InterPolation -->
+        <tr>
+            <td>
+                <span>{{myName}}</span>
+            </td>
+            <td>
+                <strong>{{homedistrict}}</strong>
+            </td>
+        </tr>
+
+        <!-- Property binding -->
+        <tr>
+            <br><br>
+            <td>
+                <input type="text" [value]="myName">
+            </td>
+            <br>
+            <td><p [class]="className">This CSS Propert Binding</p></td>
+
+            <td><input [type]="inputtype"></td>
+
+
+        </tr>
+
+        <!-- Two way data binding -->
+        <tr>
+            <td>
+                <button (click)="showwelcomeMessge()">Welcome Messge</button>
+            </td>
+            <td>
+                <select (change)="onStatechenged()">
+                    <option>Bogura</option>
+                    <option>Raajshahi</option>
+                    <option>Dhaka</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" [(ngModel)]="myName"></td>
+            
+            <td>
+                <button (click)="changedMyname('MEHEDI KAZI')">Change Name</button>
+            </td>
+
+            <td>
+                <button (click)="changedMyname('MEHEDI hassan')"> Change Name</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

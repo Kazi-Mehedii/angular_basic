@@ -5,7 +5,7 @@ import { Variable } from "./component/variable/variable";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Databinding, Variable],
+  imports: [ Databinding, Variable],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
